@@ -1,79 +1,106 @@
-/* 1. Виділити перший елемент <li> та надати йому жирний шрифт */
-li:first-of-type {
-    font-weight: bold;
+/* Загальні стилі для body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* 2. Вибрати всі <a>, що є останніми дочірніми елементами і пофарбувати у червоний колір */
-a:last-child {
-    color: red;
+/* Стилі для навігації */
+nav {
+    background-color: #4CAF50; /* Темно-зелене тло для навігації */
+    padding: 10px;
 }
 
-/* 3. Вибрати всі disabled <input> і надати їм сірий фоновий колір */
-input:disabled {
-    background-color: gray;
+nav ul {
+    list-style-type: none; /* Скидання стандартних стилів списку */
+    margin: 0;
+    padding: 0;
 }
 
-/* 4. Вибрати всі <p>, що є прямими дочірніми елементами <div> і надати жирний шрифт */
-div > p {
-    font-weight: bold;
+nav ul li {
+    display: inline; /* Відображення пунктів навігації в один ряд */
+    margin-right: 20px; /* Відстань між пунктами навігації */
 }
 
-/* 5. Вибрати всі елементи з href, що починаються з https і пофарбувати їх у зелений колір */
-a[href^="https"] {
-    color: green;
+nav ul li a {
+    text-decoration: none; /* Скидання підкреслення */
+    color: white; /* Білий колір тексту */
+    font-weight: bold; /* Жирний шрифт для посилань */
 }
 
-/* 6. Вибрати всі input[type="text"] і надати їм рамку 1px суцільним синім кольором */
-input[type="text"] {
-    border: 1px solid blue;
+nav ul li a:hover {
+    text-decoration: underline; /* Підкреслення при наведенні */
 }
 
-/* 7. Вибрати всі <li>, що є першим або останнім елементом і встановити шрифт 24px */
-li:first-child, li:last-child {
-    font-size: 24px;
+/* Стилі для заголовків */
+h1 {
+    color: #4CAF50; /* Зелений колір для заголовка H1 */
 }
 
-/* 8. Вибрати всі <p>, що є нащадками <div> і встановити шрифт 16px */
-div p {
-    font-size: 16px;
+h2 {
+    color: #333; /* Темно-сірий для заголовка H2 */
 }
 
-/* 9. Вибрати всі input[checked] і надати їм світло-блакитний фон */
-input:checked {
-    background-color: lightblue;
+/* Стилі для абзаців */
+p {
+    line-height: 1.6; /* Збільшений міжрядковий інтервал */
 }
 
-/* 10. Виділити всі <a> в <li> і підкреслити їх */
-li > a {
-    text-decoration: underline;
+/* Стилі для списків */
+ul {
+    margin-top: 10px; /* Відстань між списком та попереднім елементом */
 }
 
-/* 11. Вибрати всі парні <li> елементи і надати їм жирний шрифт */
-li:nth-child(even) {
-    font-weight: bold;
+/* Стилі для форм */
+form {
+    margin-top: 20px; /* Відстань перед формою */
+    padding: 10px;
+    background-color: #fff; /* Біле тло для форми */
+    border: 1px solid #ccc; /* Сіра рамка для форми */
+    border-radius: 5px; /* Закруглені кути */
 }
 
-/* 12. Вибрати всі <input[type="text"]> і якщо вони не disabled, надати їм сірий фон */
-input[type="text"]:not(:disabled) {
-    background-color: lightgray;
+form label {
+    display: block; /* Перенесення міток на новий рядок */
+    margin: 10px 0 5px; /* Відстань між міткою та полем введення */
 }
 
-/* 13. Вибрати перші <p> елементи їх батьків і встановити шрифт 24px */
-p:first-child {
-    font-size: 24px;
+form input[type="text"], 
+form input[type="email"] {
+    width: 100%; /* Розтягування полів введення на всю ширину */
+    padding: 8px; /* Внутрішнє відступи */
+    margin-bottom: 10px; /* Відстань між полями */
+    border: 1px solid #ccc; /* Сіра рамка для полів введення */
+    border-radius: 4px; /* Закруглені кути */
 }
 
-/* 14. Вибрати <li>, що йде після .special і зробити його перечеркнутим */
-.special + li {
-    text-decoration: line-through;
+/* Стилі для чекбоксів */
+form input[type="checkbox"] {
+    margin-right: 5px; /* Відстань між чекбоксом та текстом */
 }
 
-/* 15. Виділити першу літеру кожного <p> і встановити її розмір шрифту 36px */
-p::first-letter {
-    font-size: 36px;
+/* Стилі для додаткового розділу */
+.special {
+    font-weight: bold; /* Жирний шрифт для спеціального пункту списку */
+    color: #FF5722; /* Оранжевий колір */
 }
 
-/* 16. Додати для кожного <a> псевдоелемент ::after з вмістом ↗️ */
-a::after {
-    content: ' ↗️';
+/* Стилі для футера */
+footer {
+    margin-top: 20px; /* Відстань перед футером */
+    padding: 10px;
+    background-color: #333; /* Темно-сірий футер */
+    color: white; /* Білий текст */
+    text-align: center; /* Вирівнювання тексту по центру */
+}
+
+footer a {
+    color: #4CAF50; /* Зелений колір для посилання */
+    text-decoration: none; /* Скидання підкреслення */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Підкреслення при наведенні */
 }
